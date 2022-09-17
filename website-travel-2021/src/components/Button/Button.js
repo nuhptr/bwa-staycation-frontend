@@ -1,7 +1,22 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
+
+// TODO: check proptypes
+Button.propTypes = {
+  type: propTypes.oneOf(["button", "link"]),
+  onClick: propTypes.func,
+  target: propTypes.string,
+  href: propTypes.string,
+  className: propTypes.string,
+  isExternal: propTypes.bool,
+  isDisabled: propTypes.bool,
+  isLoading: propTypes.bool,
+  isSmall: propTypes.bool,
+  isLarge: propTypes.bool,
+  isBlock: propTypes.bool,
+  hasShadow: propTypes.bool,
+};
 
 export default function Button(props) {
   const className = [props.className];
@@ -71,19 +86,3 @@ export default function Button(props) {
     </Button>
   );
 }
-
-// TODO: check proptypes
-Button.propTypes = {
-  type: propTypes.oneOf(["button", "link"]),
-  onClick: propTypes.func,
-  target: propTypes.string,
-  href: propTypes.string,
-  className: propTypes.string,
-  isExternal: propTypes.bool,
-  isDisabled: propTypes.bool,
-  isLoading: propTypes.bool,
-  isSmall: propTypes.bool,
-  isLarge: propTypes.bool,
-  isBlock: propTypes.bool,
-  hasShadow: propTypes.bool,
-};
