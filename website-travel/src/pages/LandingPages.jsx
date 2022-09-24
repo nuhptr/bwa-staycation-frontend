@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 
+import Header from "layouts/Header";
 export default class LandingPages extends Component {
   render() {
-    return <div>LandingPages</div>;
+    return (
+      <>
+        <Header {...this.props} />
+      </>
+    );
   }
 }
